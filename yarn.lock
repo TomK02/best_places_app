@@ -3724,6 +3724,8 @@ __metadata:
     prettier: "npm:2.8.8"
     react: "npm:18.2.0"
     react-native: "npm:0.74.2"
+    react-native-dotenv: "npm:^3.4.11"
+    react-native-geolocation-service: "npm:^5.3.1"
     react-native-gesture-handler: "npm:^2.17.1"
     react-native-image-picker: "npm:^7.1.2"
     react-native-reanimated: "npm:^3.12.1"
@@ -4473,6 +4475,13 @@ __metadata:
   dependencies:
     esutils: "npm:^2.0.2"
   checksum: 10c0/c96bdccabe9d62ab6fea9399fdff04a66e6563c1d6fb3a3a063e8d53c3bb136ba63e84250bbf63d00086a769ad53aef92d2bd483f03f837fc97b71cbee6b2520
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^16.4.5":
+  version: 16.4.5
+  resolution: "dotenv@npm:16.4.5"
+  checksum: 10c0/48d92870076832af0418b13acd6e5a5a3e83bb00df690d9812e94b24aff62b88ade955ac99a05501305b8dc8f1b0ee7638b18493deb6fe93d680e5220936292f
   languageName: node
   linkType: hard
 
@@ -8335,6 +8344,24 @@ __metadata:
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 10c0/2bdb6b93fbb1820b024b496042cce405c57e2f85e777c9aabd55f9b26d145408f9f74f5934676ffdc46f3dcff656d78413a6e43968e7b3f92eea35b3052e9053
+  languageName: node
+  linkType: hard
+
+"react-native-dotenv@npm:^3.4.11":
+  version: 3.4.11
+  resolution: "react-native-dotenv@npm:3.4.11"
+  dependencies:
+    dotenv: "npm:^16.4.5"
+  peerDependencies:
+    "@babel/runtime": ^7.20.6
+  checksum: 10c0/9ed4a37fb59030706d17a1cc49d05af9d8fc57dcb2ef97e122b844f3ab6f6331ebc089afac559fe5bddf37806aa282b4118005f1b27aae5e37fdc3fc8bd7625c
+  languageName: node
+  linkType: hard
+
+"react-native-geolocation-service@npm:^5.3.1":
+  version: 5.3.1
+  resolution: "react-native-geolocation-service@npm:5.3.1"
+  checksum: 10c0/54cbd8b36dcfcbc3d7a6303766d07c944e634cb40ff1f353c3b965f07bfe2d39a3514e05a48e5008d5d2529dde3ef0e6f8bc8ed1f729988fe3497eba29635c90
   languageName: node
   linkType: hard
 
