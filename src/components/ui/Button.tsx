@@ -1,26 +1,19 @@
-import React, { PropsWithChildren } from 'react';
-import { Pressable, StyleSheet, Text, View, ViewStyle } from 'react-native';
-import { GlobalTheme } from '../../themes/constatns';
+import React from 'react';
+import { Pressable, StyleSheet, Text } from 'react-native';
+import { GlobalTheme } from '../../themes/constants';
 
-interface ButtonProps extends PropsWithChildren {
-  style?: ViewStyle;
-  mode?: 'flat';
+interface ButtonProps {
+  children: string;
   onPress: () => void;
 }
 
-function Button({ mode, style, onPress, children }: ButtonProps) {
+function Button({ children, onPress }: ButtonProps) {
   return (
-    <View style={style}>
-      <Pressable
-        onPress={onPress}
-        style={({ pressed }) => pressed && styles.pressed}>
-        <View style={[styles.button, mode === 'flat' && styles.flat]}>
-          <Text style={[styles.buttonText, mode === 'flat' && styles.flatText]}>
-            {children}
-          </Text>
-        </View>
-      </Pressable>
-    </View>
+    <Pressable
+      onPress={onPress}
+      style={({ pressed }) => [styles.button, pressed && styles.pressed]}>
+      <Text style={styles.text}>{children}</Text>
+    </Pressable>
   );
 }
 
@@ -28,23 +21,23 @@ export default Button;
 
 const styles = StyleSheet.create({
   button: {
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    margin: 4,
+    backgroundColor: GlobalTheme.colors.primary800,
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOpacity: 0.15,
+    shadowOffset: { width: 1, height: 1 },
+    shadowRadius: 2,
     borderRadius: 4,
-    padding: 8,
-    backgroundColor: GlobalTheme.colors.primary500,
-  },
-  flat: {
-    backgroundColor: 'transparent',
-  },
-  buttonText: {
-    color: '#fff',
-    textAlign: 'center',
-  },
-  flatText: {
-    color: GlobalTheme.colors.primary200,
   },
   pressed: {
     opacity: 0.75,
-    backgroundColor: GlobalTheme.colors.primary100,
-    borderRadius: 4,
+  },
+  text: {
+    textAlign: 'center',
+    fontSize: 16,
+    color: GlobalTheme.colors.primary50,
   },
 });
